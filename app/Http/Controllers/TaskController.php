@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Log;
 use App\Models\Item;
 use Illuminate\Http\Request;
 
@@ -10,7 +9,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $items = Item::all();
+        $items = Item::paginate(10);
         return view('pages.index', [
             'items' => $items
         ]);

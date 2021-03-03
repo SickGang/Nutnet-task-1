@@ -18,4 +18,3 @@ Route::get('/', [TaskController::class, 'index']);
 Route::get('/delete/{id}', [TaskController::class, 'destroy'])->name('destroy');
 Route::get('/item/{id}', [TaskController::class, 'getItem'])->name('getItem');
 Route::get('/update/{id}', [TaskController::class, 'updateItem'])->name('updateItem');
-//Route::put('/update/{id}', [TaskController::class, 'updateItem']);
